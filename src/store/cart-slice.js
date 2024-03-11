@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
   name: 'cart',
-  initialState: { items: [], totalQuantity: 0, changed: false },
+  initialState: { items: [], totalQuantity: 0, changed: false }, //changed는 장바구니에 변경이 있었는지 여부를 나타냅니다.
   reducers: {
     replaceCart(state, action) {
       state.totalQuantity = action.payload.totalQuantity;
@@ -45,4 +45,5 @@ const cartSlice = createSlice({
 });
 
 export const cartActions = cartSlice.actions;
+
 export default cartSlice;
